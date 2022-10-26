@@ -1,0 +1,308 @@
+<?xml version="1.0" ?>
+<robot name="era" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find era_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find era_description)/urdf/era.trans" />
+<xacro:include filename="$(find era_description)/urdf/era.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.09135991590898004 -0.7268295787188722 0.10266681262468225" rpy="0 0 0"/>
+    <mass value="47.045206486343645"/>
+    <inertia ixx="1.745435" iyy="3.833445" izz="3.775252" ixy="-0.01373" iyz="-0.023328" ixz="-0.680295"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque144144144"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_CL_1">
+  <inertial>
+    <origin xyz="-9.323562935580412e-06 -0.01573373511544418 2.97525768255813e-06" rpy="0 0 0"/>
+    <mass value="3.603430567054545"/>
+    <inertia ixx="0.008827" iyy="0.013501" izz="0.008827" ixy="-1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.014653 0.941085 0.188941" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_CL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="acciaio_satinato"/>
+  </visual>
+  <collision>
+    <origin xyz="0.014653 0.941085 0.188941" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_CL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_BL_1">
+  <inertial>
+    <origin xyz="-9.286827558685484e-06 -0.015733735115445624 2.4657286341878137e-06" rpy="0 0 0"/>
+    <mass value="3.603430567054545"/>
+    <inertia ixx="0.008827" iyy="0.013501" izz="0.008827" ixy="-1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.417285 0.941085 0.233531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_BL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="acciaio_satinato"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.417285 0.941085 0.233531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_BL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_FL_1">
+  <inertial>
+    <origin xyz="-9.462210829758178e-06 -0.015733735115443293 2.4469880666455612e-06" rpy="0 0 0"/>
+    <mass value="3.603430567054545"/>
+    <inertia ixx="0.008827" iyy="0.013501" izz="0.008827" ixy="-1e-06" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.465461 0.941025 0.152837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="acciaio_satinato"/>
+  </visual>
+  <collision>
+    <origin xyz="0.465461 0.941025 0.152837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_FL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_FR_1">
+  <inertial>
+    <origin xyz="9.80277276119157e-06 0.01573412581578587 2.446988087656532e-06" rpy="0 0 0"/>
+    <mass value="3.603430567054545"/>
+    <inertia ixx="0.008827" iyy="0.013501" izz="0.008827" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.465461 0.514345 0.152837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="acciaio_satinato"/>
+  </visual>
+  <collision>
+    <origin xyz="0.465461 0.514345 0.152837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_FR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_CR_1">
+  <inertial>
+    <origin xyz="9.941420650382005e-06 0.015734125815797972 2.9752577035968564e-06" rpy="0 0 0"/>
+    <mass value="3.603430567054545"/>
+    <inertia ixx="0.008827" iyy="0.013501" izz="0.008827" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.014653 0.514285 0.188941" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_CR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="acciaio_satinato"/>
+  </visual>
+  <collision>
+    <origin xyz="0.014653 0.514285 0.188941" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_CR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_BR_1">
+  <inertial>
+    <origin xyz="9.978156025824969e-06 0.015734125815779543 2.465728655087762e-06" rpy="0 0 0"/>
+    <mass value="3.603430567054545"/>
+    <inertia ixx="0.008827" iyy="0.013501" izz="0.008827" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.417285 0.514285 0.233531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_BR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="acciaio_satinato"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.417285 0.514285 0.233531" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Wheel_BR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Bogie_R_1">
+  <inertial>
+    <origin xyz="-0.0061684676109693415 -0.027747119725431257 -0.08787766559119213" rpy="0 0 0"/>
+    <mass value="5.163849328029631"/>
+    <inertia ixx="0.022621" iyy="0.192562" izz="0.178888" ixy="-0.001485" iyz="-0.002945" ixz="0.006589"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.228784 0.481845 0.080549" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Bogie_R_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque208208208"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.228784 0.481845 0.080549" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Bogie_R_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Bogie_L_1">
+  <inertial>
+    <origin xyz="-0.006168302591012309 0.027747302853449063 -0.08787789864873975" rpy="0 0 0"/>
+    <mass value="5.163847571084206"/>
+    <inertia ixx="0.022621" iyy="0.192563" izz="0.178888" ixy="0.001485" iyz="0.002945" ixz="0.006589"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.228784 0.973525 0.080549" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Bogie_L_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque224224224"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.228784 0.973525 0.080549" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Bogie_L_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rocker_R_1">
+  <inertial>
+    <origin xyz="-0.22291307995528173 0.0036823018372411642 -0.10605598600196418" rpy="0 0 0"/>
+    <mass value="3.97405487918333"/>
+    <inertia ixx="0.03477" iyy="0.290773" izz="0.261071" ixy="-0.008838" iyz="-0.003519" ixz="-0.074096"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.004905 0.508785 -0.053121" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Rocker_R_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque208208208"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.004905 0.508785 -0.053121" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Rocker_R_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rocker_L_1">
+  <inertial>
+    <origin xyz="-0.2229133996183493 -0.00368188600728403 -0.10605602446261175" rpy="0 0 0"/>
+    <mass value="3.9740504962375915"/>
+    <inertia ixx="0.03477" iyy="0.290773" izz="0.26107" ixy="0.008838" iyz="0.003519" ixz="-0.074096"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.004905 0.946585 -0.053121" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Rocker_L_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="opaque224224224"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.004905 0.946585 -0.053121" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://era_description/meshes/Rocker_L_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Motor_CL" type="continuous">
+  <origin xyz="-0.243437 0.03244 -0.108392" rpy="0 0 0"/>
+  <parent link="Bogie_L_1"/>
+  <child link="Wheel_CL_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Motor_BL" type="continuous">
+  <origin xyz="0.188501 0.03244 -0.152982" rpy="0 0 0"/>
+  <parent link="Bogie_L_1"/>
+  <child link="Wheel_BL_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Motor_FL" type="continuous">
+  <origin xyz="-0.470366 0.00556 -0.205958" rpy="0 0 0"/>
+  <parent link="Rocker_L_1"/>
+  <child link="Wheel_FL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Motor_FR" type="continuous">
+  <origin xyz="-0.470366 -0.00556 -0.205958" rpy="0 0 0"/>
+  <parent link="Rocker_R_1"/>
+  <child link="Wheel_FR_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Motor_CR" type="continuous">
+  <origin xyz="-0.243437 -0.03244 -0.108392" rpy="0 0 0"/>
+  <parent link="Bogie_R_1"/>
+  <child link="Wheel_CR_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Motor_BR" type="continuous">
+  <origin xyz="0.188501 -0.03244 -0.152982" rpy="0 0 0"/>
+  <parent link="Bogie_R_1"/>
+  <child link="Wheel_BR_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Joint_Rocker_Bogie_R" type="continuous">
+  <origin xyz="0.223879 0.02694 -0.13367" rpy="0 0 0"/>
+  <parent link="Rocker_R_1"/>
+  <child link="Bogie_R_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Joint_Rocker_Bogie_L" type="continuous">
+  <origin xyz="0.223879 -0.02694 -0.13367" rpy="0 0 0"/>
+  <parent link="Rocker_L_1"/>
+  <child link="Bogie_L_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Joint_Rocker_R" type="continuous">
+  <origin xyz="0.004905 -0.508785 0.053121" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Rocker_R_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Joint_Rocker_L" type="continuous">
+  <origin xyz="0.004905 -0.946585 0.053121" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Rocker_L_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>
