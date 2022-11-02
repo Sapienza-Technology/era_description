@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<robot name="era2" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="Motor_CL_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Motor_CL">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Motor_CL_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Motor_BL_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Motor_BL">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Motor_BL_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Motor_FL_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Motor_FL">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Motor_FL_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Motor_FR_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Motor_FR">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Motor_FR_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Motor_CR_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Motor_CR">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Motor_CR_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Motor_BR_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Motor_BR">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Motor_BR_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Joint_Rocker_Bogie_R_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Joint_Rocker_Bogie_R">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Joint_Rocker_Bogie_R_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Joint_Rocker_Bogie_L_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Joint_Rocker_Bogie_L">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Joint_Rocker_Bogie_L_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Joint_case_rocker_L_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Joint_case_rocker_L">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Joint_case_rocker_L_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Joint_case_rocker_R_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Joint_case_rocker_R">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Joint_case_rocker_R_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>
